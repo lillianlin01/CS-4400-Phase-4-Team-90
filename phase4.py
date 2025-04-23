@@ -2370,6 +2370,7 @@ class database:
 
     def simulation_cycle(self):
         self.cursor.execute('CALL simulation_cycle()')
+        self.conn.close()
 
     def close(self):
         self.cursor.close()
