@@ -539,7 +539,7 @@ class add_person_window(QWidget):
             self.message.setText('You must provide either taxID and experience OR miles and funds')
             return
 
-        locations = db.get_foreign_key('select locationID from person')
+        locations = db.get_foreign_key('select locationID from location')
         if data['locationID'] not in locations:
             self.message.setText('Location must be already existing')
             return
